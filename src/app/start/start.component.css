@@ -1,0 +1,48 @@
+main {
+  text-align: center;
+  padding: 1em;
+}
+
+.unauthorized form {
+  margin: auto;
+  max-width: 300px;
+  border: 2px solid purple;
+  border-radius: 10px;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+label{
+  font-weight: bold;
+}
+.error{
+  width: 300%;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+
+}
+p{
+  width: 300%;
+  text-align: center;
+}
+.authorized, .admin{
+  display: flex;
+}
+input{
+
+  border-radius: 5px;
+}
+.unauthorized form div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 1em;
+}
+
+.submitButton{
+  background-color: white;
+  font-weight: bold;
+  height: 150%;
+  width: 300%;
+}

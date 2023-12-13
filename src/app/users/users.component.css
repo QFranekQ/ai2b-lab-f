@@ -1,0 +1,25 @@
+main {
+  text-align: center;
+  padding: 1em;
+}
+
+.users .user {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.role-badge {
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+.role-badge.role-user {
+  background-color: green;
+}
+
+.role-badge.role-admin {
+  background-color: red;
+  color: white;
+}

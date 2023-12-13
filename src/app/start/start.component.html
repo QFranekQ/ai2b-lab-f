@@ -1,0 +1,41 @@
+<main>
+  <div class="unauthorized" *ngIf="!isAuthenticated()">
+    <div>
+      Nie jesteś jeszcze zalogowany
+    </div>
+    <form (submit)="loginSubmit()">
+      <div>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" placeholder="login" [(ngModel)]="username" />
+      </div>
+      <div>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" placeholder="password" [(ngModel)]="password" />
+      </div>
+      <div>
+        <input type="submit" value="Login" class="submitButton"/>
+      </div>
+      <div *ngIf="error">
+        <div class="error"><p>{{ error }}</p></div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="authorized" *ngIf="isAuthenticated() && !isAdmin()">
+    <p>
+      Jesteś zalogowany. Możesz sprawdzić zakładkę <strong>Przedmioty</strong>,
+      a jak masz uprawnienia 'admin' to także <strong>Użytkownicy</strong>
+
+
+    </p>
+  </div>
+
+
+  <div class="admin" *ngIf="isAdmin()">
+    <p>
+      Jesteś zalogowany. Możesz sprawdzić zakładkę <strong>Przedmioty</strong>,
+      a ponieważ masz uprawnienia 'admin' to także <strong>Użytkownicy</strong>
+    </p>
+  </div>
+</main>
